@@ -18,6 +18,25 @@ Consumer voice assistants are siloed — Alexa talks to Alexa things, Siri talks
 - **Response synthesis** — AIOS composes a spoken reply and hands it back to Alexa for TTS
 - **Device control bridge** — ties into local Hue lights, router SOAP API, and curfew/device state
 
+## Architecture
+
+```mermaid
+graph LR
+    User[🗣️ Voice] --> Alexa[🎙️ Alexa]
+    Alexa --> Skill[☁️ Custom Skill]
+    Skill --> Lambda[λ AWS Lambda · TS]
+    Lambda --> Webhook[📥 AIOS webhook]
+
+    Webhook --> Intent{Intent match?}
+    Intent -->|yes| Cap[Capability handler]
+    Intent -->|no| Claude[🤖 Claude parse]
+    Claude --> Cap
+
+    Cap --> Devices[💡 Hue · 📡 Router · 💬 Discord · 📝 Notion]
+    Cap --> Reply[🔊 Spoken reply]
+    Reply --> Lambda
+```
+
 ## Software
 
 | Layer | Tech |
