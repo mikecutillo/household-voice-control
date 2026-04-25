@@ -42,6 +42,12 @@ Consumer voice assistants are siloed — Alexa talks to Alexa things, Siri talks
 ![Anthropic Claude](https://img.shields.io/badge/Anthropic_Claude-CC785C?style=flat&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 
+## Related in the AIOS Portfolio
+
+- **[BMO Discord Agent](https://github.com/mikecutillo/bmo-discord-agent)** — Discord-native family AI companion; common destination for routed voice intents
+- **[AIOS](https://github.com/mikecutillo/aios)** — The receiver; Next.js dashboard orchestrating 16+ household and business modules
+- **[Spellbook Extension](https://github.com/mikecutillo/spellbook-extension)** — Chrome MV3 extension turning page context + voice into Claude-executed action plans
+
 ---
 
 Part of the AIOS portfolio. See the [profile README](https://github.com/mikecutillo) for the full system map.
